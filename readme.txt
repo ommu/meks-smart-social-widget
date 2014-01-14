@@ -4,7 +4,7 @@ Donate link: http://mekshq.com/
 Tags: social, icons, widget, linkedin, reddit, vimeo, dribble, instagram, pinterest
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -37,6 +37,9 @@ For any questions, error reports and suggestions please email support@mekshq.com
 
 
 == Changelog ==
+
+= 1.1 =
+* Minor CSS tweaks
 
 = 1.0 =
 * Initial release
