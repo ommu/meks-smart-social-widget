@@ -1,0 +1,42 @@
+=== Meks Smart Social Widget ===
+Contributors: mekshq
+Donate link: http://mekshq.com/
+Tags: social, icons, widget, linkedin, reddit, vimeo, dribble, instagram, pinterest
+Requires at least: 3.0
+Tested up to: 3.8
+Stable tag: 1.0
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl.html
+
+Easily display up to 40 social icons inside your WordPress widget.
+
+== Description ==
+
+Choose from different icon shapes and sizes and quickly connect your website with your social profiles. There are 40 social icons provided: Aim, Apple, Behance, Blogger, Cargo, 
+Delicious, DeviantArt, Digg, Dribbble, Envato, Evernote, Facebook, Flickr, Forrst, Github, Google, GooglePlus, GrooveShark, Icloud, Instagram, LastFM, LinkedIN, MySpace, Picasa, 
+Pinterest, ReddIt, Rss, Skype, StumbleUpon, Tumblr, Twitter, Vimeo, WordPress, Youtube, Zerply...
+
+### Features
+* Choose from around 40 social icons
+* Choose from 3 different icon shapes (square, circle or rounded corners)
+* Define custom size for your icons
+
+
+This plugin is created by <a href="http://mekshq.com" target="_blank">MeksHQ</a>
+
+== Installation ==
+
+1. Upload meks-smart-social-widget.zip to plugins via WordPress admin panel or upload unzipped folder to your wp-content/plugins/ folder
+2. Activate the plugin through the "Plugins" menu in WordPress
+3. Go to Appearance -> Widgets to add and setup the widget
+
+== Frequently Asked Questions ==
+
+For any questions, error reports and suggestions please email support@mekshq.com or visit http://mekshq.com
+
+
+
+== Changelog ==
+
+= 1.0 =
+* Initial release
