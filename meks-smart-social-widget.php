@@ -4,7 +4,7 @@ Plugin Name: Meks Smart Social Widget
 Plugin URI: http://mekshq.com
 Description: Easily display up to 40 social icons inside WordPress widget. Choose from different icon shapes and sizes and quickly connect your website with your social profiles.
 Author: MeksHQ
-Version: 1.1
+Version: 1.1.1
 Author URI: http://mekshq.com
 */
 
@@ -28,7 +28,7 @@ Author URI: http://mekshq.com
 
 define ('MKS_SOCIAL_WIDGET_URL', trailingslashit(plugin_dir_url(__FILE__)));
 define ('MKS_SOCIAL_WIDGET_DIR', trailingslashit(plugin_dir_path(__FILE__)));
-define ('MKS_SOCIAL_WIDGET_VER', '1.1.0');
+define ('MKS_SOCIAL_WIDGET_VER', '1.1.1');
 
 /* Initialize Widget */
 if(!function_exists('mks_social_widget_init')):
@@ -39,5 +39,13 @@ if(!function_exists('mks_social_widget_init')):
 endif;
 
 add_action('widgets_init','mks_social_widget_init');
+
+
+/* Load text domain */
+function mks_load_social_widget_text_domain() {
+  load_plugin_textdomain( 'meks', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+
+add_action( 'plugins_loaded', 'mks_load_social_widget_text_domain' );
 
 ?>

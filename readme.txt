@@ -3,8 +3,8 @@ Contributors: mekshq
 Donate link: http://mekshq.com/
 Tags: social, icons, widget, linkedin, reddit, vimeo, dribble, instagram, pinterest
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 1.1
+Tested up to: 3.8.1
+Stable tag: 1.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -34,9 +34,17 @@ This plugin is created by <a href="http://mekshq.com" target="_blank">MeksHQ</a>
 
 For any questions, error reports and suggestions please email support@mekshq.com or visit http://mekshq.com
 
+== Screenshots ==
 
+1. Widget options interface
+2. Widget in action - example 1
+3. Widget in action - example 2
+4. Widget in action - example 3
 
 == Changelog ==
+
+= 1.1.1 =
+* Added default language files (translation ready)
 
 = 1.1 =
 * Minor CSS tweaks
