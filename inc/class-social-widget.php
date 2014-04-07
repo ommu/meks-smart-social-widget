@@ -12,12 +12,15 @@ class MKS_Social_Widget extends WP_Widget {
 		
 		add_action( 'wp_enqueue_scripts', array($this,'enqueue_scripts'));
 		add_action( 'admin_enqueue_scripts', array($this,'enqueue_admin_scripts'));
+		
 	}
 
 	function enqueue_scripts(){
  		wp_register_style( 'meks-social-widget', MKS_SOCIAL_WIDGET_URL.'css/style.css', false, MKS_SOCIAL_WIDGET_VER );
     wp_enqueue_style( 'meks-social-widget' );
   }
+  
+ 
   
   function enqueue_admin_scripts(){
 			wp_enqueue_script( 'meks-social-widget-js', MKS_SOCIAL_WIDGET_URL.'js/main.js', array( 'jquery'), MKS_SOCIAL_WIDGET_VER );	
@@ -63,10 +66,11 @@ class MKS_Social_Widget extends WP_Widget {
 		$instance['size'] = absint($new_instance['size']);
 		$instance['target'] = $new_instance['target'];
 		$instance['social'] = array();
-		
 		if(!empty($new_instance['social_icon'])){
+			$protocols = wp_allowed_protocols();
+			$protocols[] = 'skype'; //allow skype call protocol
 			for($i=0; $i < (count($new_instance['social_icon']) - 1); $i++){
-					$temp = array('icon' => $new_instance['social_icon'][$i], 'url' => esc_url($new_instance['social_url'][$i]));
+					$temp = array('icon' => $new_instance['social_icon'][$i], 'url' => esc_url($new_instance['social_url'][$i], $protocols));
 					$instance['social'][] = $temp;
 			}
 		}
