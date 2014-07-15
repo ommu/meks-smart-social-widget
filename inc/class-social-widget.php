@@ -191,14 +191,18 @@ class MKS_Social_Widget extends WP_Widget {
 											'reddit' => 'ReddIT',
 											'rss' => 'Rss',
 											'skype' => 'Skype',
+											'spotify' => 'Spotify',
 											'stumbleupon' => 'StumbleUpon',
 											'tumblr' => 'Tumblr',
 											'twitter' => 'Twitter',
 											'vimeo' => 'Vimeo',
-											'wordpress' => 'WordPress' ,
+											'vine' => 'Vine',
+											'wordpress' => 'WordPress',
+											'xing' => 'Xing',
 											'yahoo' => 'Yahoo',
 											'youtube' => 'Youtube',
-											'zerply' => 'Zerply'
+											'zerply' => 'Zerply',
+											'fh_px' => '500px',
 							);
 										
 		return $social;
