@@ -2,7 +2,9 @@
 /*
 Plugin Name: Meks Smart Social Widget
 Plugin URI: http://mekshq.com
-Description: Easily display up to 40 social icons inside WordPress widget. Choose from different icon shapes and sizes and quickly connect your website with your social profiles.
+Description: Easily display up to 40 social icons inside WordPress widget. Choose from different icon shapes and sizes and quickly connect your website with your social profiles. Aim, Apple, Behance, Blogger, Cargo, 
+Delicious, DeviantArt, Digg, Dribbble, Envato, Evernote, Facebook, Flickr, Forrst, Github, Google, GooglePlus, GrooveShark, Icloud, Instagram, LastFM, LinkedIN, MySpace, Picasa, 
+Pinterest, ReddIt, Rss, Skype, Spotify, StumbleUpon, Tumblr, Twitter, Vimeo, Vine, WordPress, Xing, Youtube, Zerply, 500px...
 Author: MeksHQ
 Version: 1.2.0
 Author URI: http://mekshq.com
