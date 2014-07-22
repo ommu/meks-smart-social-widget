@@ -46,7 +46,7 @@ class MKS_Social_Widget extends WP_Widget {
 			$size_style = 'style="width: '.$instance['size'].'px; height: '.$instance['size'].'px;"'; 
 			$target = 'target="'.$instance['target'].'"';
 		?>
-			<ul>
+			<ul class="mks_social_widget_ul">
 		  	<?php foreach($instance['social'] as $item) : ?>
 		  		<li><a href="<?php echo $item['url']; ?>" class="<?php echo $item['icon'].'_ico soc_'.$instance['style'];?>" <?php echo $target; ?> <?php echo $size_style; ?>><?php echo $item['icon']; ?></a></li>
 		  	<?php endforeach; ?>

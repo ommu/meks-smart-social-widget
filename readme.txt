@@ -4,11 +4,11 @@ Donate link: http://mekshq.com/
 Tags: social, icons, widget, linkedin, reddit, vimeo, dribble, instagram, pinterest
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
-Easily display up to 40 social icons inside your WordPress widget.
+Easily display social icons inside your WordPress widget.
 
 == Description ==
 
@@ -42,6 +42,9 @@ For any questions, error reports and suggestions please email support@mekshq.com
 4. Widget in action - example 3
 
 == Changelog ==
+
+= 1.2.1 =
+* Improved: Compatibility with themes not developed on common WordPress coding standards
 
 = 1.2.0 =
 * Added new icons : Xing, Vine, 500px, Spotify, Twitter(updated)
