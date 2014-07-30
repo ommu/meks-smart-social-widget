@@ -4,7 +4,7 @@ Donate link: http://mekshq.com/
 Tags: social, icons, widget, linkedin, reddit, vimeo, dribble, instagram, pinterest
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -22,7 +22,7 @@ Pinterest, ReddIt, Rss, Skype, Spotify, StumbleUpon, Tumblr, Twitter, Vimeo, Vin
 * Define custom size for your icons
 
 
-This plugin is created by <a href="http://mekshq.com" target="_blank">MeksHQ</a>
+Smart Social Widget plugin is created by <a href="http://mekshq.com" target="_blank">MeksHQ</a>
 
 == Installation ==
 
@@ -42,6 +42,9 @@ For any questions, error reports and suggestions please email support@mekshq.com
 4. Widget in action - example 3
 
 == Changelog ==
+
+= 1.2.2 =
+* Full compatibility with new WordPress customizer in WP 3.9+
 
 = 1.2.1 =
 * Improved: Compatibility with themes not developed on common WordPress coding standards

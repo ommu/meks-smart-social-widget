@@ -9,7 +9,7 @@
 				var widget_holder = $(this).closest('.widget-inside');
 				var cloner = widget_holder.find('.mks_social_clone');
 				
-				widget_holder.find('.mks_social_container').append(cloner.html());
+				widget_holder.find('.mks_social_container').append('<li>'+cloner.html()+'</li>');
 				
 			});
 			

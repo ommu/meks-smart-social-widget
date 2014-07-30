@@ -5,6 +5,8 @@
 
 class MKS_Social_Widget extends WP_Widget {
 
+	var $defaults;
+
 	function MKS_Social_Widget() {
 		$widget_ops = array( 'classname' => 'mks_social_widget', 'description' => __('Display your social icons with this widget', 'meks') );
 		$control_ops = array( 'id_base' => 'mks_social_widget' );
@@ -12,22 +14,34 @@ class MKS_Social_Widget extends WP_Widget {
 		
 		add_action( 'wp_enqueue_scripts', array($this,'enqueue_scripts'));
 		add_action( 'admin_enqueue_scripts', array($this,'enqueue_admin_scripts'));
+
+		$this->defaults = array( 
+			'title' => __('Follow Me', 'meks'),
+			'content' => '',
+			'style' => 'square',
+			'size' => 48,
+			'target' => '_blank',
+			'social' => array()
+		);
 		
 	}
 
 	function enqueue_scripts(){
  		wp_register_style( 'meks-social-widget', MKS_SOCIAL_WIDGET_URL.'css/style.css', false, MKS_SOCIAL_WIDGET_VER );
-    wp_enqueue_style( 'meks-social-widget' );
-  }
+    	wp_enqueue_style( 'meks-social-widget' );
+  	}
   
  
   
   function enqueue_admin_scripts(){
-			wp_enqueue_script( 'meks-social-widget-js', MKS_SOCIAL_WIDGET_URL.'js/main.js', array( 'jquery'), MKS_SOCIAL_WIDGET_VER );	
+		wp_enqueue_script( 'meks-social-widget-js', MKS_SOCIAL_WIDGET_URL.'js/main.js', array( 'jquery'), MKS_SOCIAL_WIDGET_VER );	
   }
   
 	function widget( $args, $instance ) {
+		
 		extract( $args );
+
+		$instance = wp_parse_args( (array) $instance, $this->defaults );
 		
 		$title = apply_filters('widget_title', $instance['title'] );
 		echo $before_widget;
@@ -78,16 +92,8 @@ class MKS_Social_Widget extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		$defaults = array( 
-			'title' => __('Follow Me', 'meks'),
-			'content' => '',
-			'style' => 'square',
-			'size' => 48,
-			'target' => '_blank',
-			'social' => array()
-		);
 		
-		$instance = wp_parse_args( (array) $instance, $defaults );
+		$instance = wp_parse_args( (array) $instance, $this->defaults );
 
 		$social_links = $this->get_social();
 		?>
@@ -140,9 +146,7 @@ class MKS_Social_Widget extends WP_Widget {
 	  </p>
 	  
 	  <div class="mks_social_clone" style="display:none">
-	  	<li>
-				<?php $this->draw_social($this, $social_links); ?>
-		  </li>
+			<?php $this->draw_social($this, $social_links); ?>
 	  </div>
 	  
 		
@@ -162,48 +166,48 @@ class MKS_Social_Widget extends WP_Widget {
 	
 	function get_social() {
 		$social = array(
-											'aim' => 'Aim',
-											'apple' => 'Apple',
-											'behance' => 'Behance',
-											'blogger' => 'Blogger',
-											'cargo' => 'Cargo',
-											'delicious' => 'Delicious',
-											'deviantart' => 'DeviantArt',
-											'digg' => 'Digg',
-											'dribbble' => 'Dribbble',
-											'envato' => 'Envato',
-											'evernote' => 'Evernote',
-											'facebook' => 'Facebook',
-											'flickr' => 'Flickr',
-											'forrst' => 'Forrst',
-											'github' => 'Github',
-											'google' => 'Google',
-											'googleplus' => 'GooglePlus',
-											'grooveshark' => 'GrooveShark',
-											'icloud' => 'Icloud',
-											'instagram' => 'Instagram',
-											'lastfm' => 'LastFM',
-											'linkedin' => 'LinkedIN',
-											'myspace' => 'MySpace',
-											'picasa' => 'Picasa',
-											'pinterest' => 'Pinterest',
-											'posterous' => 'Posterous',
-											'reddit' => 'ReddIT',
-											'rss' => 'Rss',
-											'skype' => 'Skype',
-											'spotify' => 'Spotify',
-											'stumbleupon' => 'StumbleUpon',
-											'tumblr' => 'Tumblr',
-											'twitter' => 'Twitter',
-											'vimeo' => 'Vimeo',
-											'vine' => 'Vine',
-											'wordpress' => 'WordPress',
-											'xing' => 'Xing',
-											'yahoo' => 'Yahoo',
-											'youtube' => 'Youtube',
-											'zerply' => 'Zerply',
-											'fh_px' => '500px',
-							);
+			'aim' => 'Aim',
+			'apple' => 'Apple',
+			'behance' => 'Behance',
+			'blogger' => 'Blogger',
+			'cargo' => 'Cargo',
+			'delicious' => 'Delicious',
+			'deviantart' => 'DeviantArt',
+			'digg' => 'Digg',
+			'dribbble' => 'Dribbble',
+			'envato' => 'Envato',
+			'evernote' => 'Evernote',
+			'facebook' => 'Facebook',
+			'flickr' => 'Flickr',
+			'forrst' => 'Forrst',
+			'github' => 'Github',
+			'google' => 'Google',
+			'googleplus' => 'GooglePlus',
+			'grooveshark' => 'GrooveShark',
+			'icloud' => 'Icloud',
+			'instagram' => 'Instagram',
+			'lastfm' => 'LastFM',
+			'linkedin' => 'LinkedIN',
+			'myspace' => 'MySpace',
+			'picasa' => 'Picasa',
+			'pinterest' => 'Pinterest',
+			'posterous' => 'Posterous',
+			'reddit' => 'ReddIT',
+			'rss' => 'Rss',
+			'skype' => 'Skype',
+			'spotify' => 'Spotify',
+			'stumbleupon' => 'StumbleUpon',
+			'tumblr' => 'Tumblr',
+			'twitter' => 'Twitter',
+			'vimeo' => 'Vimeo',
+			'vine' => 'Vine',
+			'wordpress' => 'WordPress',
+			'xing' => 'Xing',
+			'yahoo' => 'Yahoo',
+			'youtube' => 'Youtube',
+			'zerply' => 'Zerply',
+			'fh_px' => '500px',
+		);
 										
 		return $social;
 }
