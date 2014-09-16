@@ -17,12 +17,16 @@ Delicious, DeviantArt, Digg, Dribbble, Envato, Evernote, Facebook, Flickr, Forrs
 Pinterest, ReddIt, Rss, Skype, Spotify, StumbleUpon, Tumblr, Twitter, Vimeo, Vine, WordPress, Xing, Youtube, Zerply, 500px...
 
 ### Features
+
 * Choose from around 40 social icons
 * Choose from 3 different icon shapes (square, circle or rounded corners)
 * Define custom size for your icons
 
-
 Smart Social Widget plugin is created by <a href="http://mekshq.com" target="_blank">MeksHQ</a>
+
+### Live preview?
+
+You can see Smart Social Widget live example on our <a href="http://mekshq.com/demo/throne" target="_blank">Throne theme demo website</a>
 
 == Installation ==
 
