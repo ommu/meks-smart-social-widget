@@ -23,6 +23,9 @@ class MKS_Social_Widget extends WP_Widget {
 			'target' => '_blank',
 			'social' => array()
 		);
+
+		//Allow themes or plugins to modify default parameters
+		$this->defaults = apply_filters('mks_social_widget_modify_defaults', $this->defaults);
 		
 	}
 
