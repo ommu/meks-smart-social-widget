@@ -30,7 +30,7 @@ Author URI: http://mekshq.com
 
 define ('MKS_SOCIAL_WIDGET_URL', trailingslashit(plugin_dir_url(__FILE__)));
 define ('MKS_SOCIAL_WIDGET_DIR', trailingslashit(plugin_dir_path(__FILE__)));
-define ('MKS_SOCIAL_WIDGET_VER', '1.2.2');
+define ('MKS_SOCIAL_WIDGET_VER', '1.2.3');
 
 /* Initialize Widget */
 if(!function_exists('mks_social_widget_init')):
